@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupee Expense Tracker Pro</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Expense Tracker</h2>
+
+    <div class="status-card">
+        <h4>Net Profit / Loss</h4>
+        <div id="profit-loss">₹0.00</div>
+        <small id="trend-text">Add a transaction to see trends</small>
+    </div>
+
+    <div class="inc-exp-container">
+        <div class="summary-box">
+            <h4>Income</h4>
+            <p id="money-plus" class="money plus">+₹0.00</p>
+        </div>
+        <div class="divider"></div>
+        <div class="summary-box">
+            <h4>Expense</h4>
+            <p id="money-minus" class="money minus">-₹0.00</p>
+        </div>
+    </div>
+
+    <div class="chart-wrapper">
+        <canvas id="balanceChart"></canvas>
+    </div>
+
+    <h3>Transaction History</h3>
+    <ul id="list" class="list"></ul>
+
+    <h3>Add New Entry</h3>
+    <form id="form">
+        <div class="form-control">
+            <input type="text" id="text" placeholder="What was this for? (e.g., Salary, Rent)" required>
+        </div>
+        <div class="form-control">
+            <input type="number" id="amount" placeholder="Amount (Use - for expense)" required>
+        </div>
+        <button class="btn btn-submit">Add Transaction</button>
+        <button type="button" id="clear-btn" class="btn btn-clear">Clear All Data</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
